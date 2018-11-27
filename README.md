@@ -43,6 +43,7 @@ This function should update the value stored at the current node based on what i
 
 # bool AddChild(T val)
 Create a new node object and add it as a child of the current node. For efficiency, the new node should be added as the first child of the current node. If a first child already exists, it should now become the second child. If a child node already has the value in variable val, this function should not modify the tree and return false. Return true if the child is successfully added.
+
 # void DeleteChild(T val) 
 Delete the child that stores the same value as in the variable val, if any.
 
@@ -107,7 +108,10 @@ Searches the entire tree for and returns the pointer to the first node storing t
     
 # TreeNode<T>* SearchBelow(TreeNode<T>* n, T val)
 Searches the subtree rooted at node n for and returns the pointer to the first node storing the same value as that passed in as argument to this function. If no such node exists, the function should return NULL. The search should be done on the tree
-nodes in the same order as a pre-order traversal.TreeNode<T>* SearchChildren(TreeNode<T>*n, T val) : Searches the immediate children (only one level deep) of the node n for a node that stores the value passed in as second argument. If such a child exists, its address is returned. NULL is returned otherwise.
+nodes in the same order as a pre-order traversal.
+    
+# TreeNode<T>* SearchChildren(TreeNode<T>*n, T val)
+Searches the immediate children (only one level deep) of the node n for a node that stores the value passed in as second argument. If such a child exists, its address is returned. NULL is returned otherwise.
     
 # TreeNode<T>* SearchChildren(T val) 
 Searches the immediate children (only one level deep) of the node pointed to by the member variable cursor, for a node that stores the value passed in as second argument. If such a child exists, its address is returned. NULL is returned otherwise.
