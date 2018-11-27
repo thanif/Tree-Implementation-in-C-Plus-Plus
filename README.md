@@ -226,5 +226,5 @@ department node. The sales node is the leaf node.
 
 
 <div align="center">
-    <img src="7.jpg" width="400px"</img> 
+    <img src="6.jpg" width="400px"</img> 
 </div>
