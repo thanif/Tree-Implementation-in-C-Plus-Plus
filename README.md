@@ -228,3 +228,23 @@ department node. The sales node is the leaf node.
 <div align="center">
     <img src="6.jpg" width="400px"</img> 
 </div>
+
+# The TotalDaySales() function
+This function should do some basic sanity checking to make sure that nodes for the year, month and day
+passed in as argument exist in the tree object, also passed in as argument. It should locate the day object
+node in the tree and pass a pointer to that object to the RecurseTotalDaySales() function. The value
+returned in that call should be returned by TotalDaySales() function.
+
+# The RecurseTotalDaySales() function
+This function should calculate and return the total sales in the subtree rooted at the node whose pointer
+is passed as argument.
+
+# The TotalMonthSales() function
+This function should do some basic sanity checking to make sure that nodes for the year and month passed
+in as argument exist in the tree object, also passed in as argument. It should locate the month object node
+in the tree and pass a pointer to that object to the RecurseTotalMonthSales() function. The value returned
+in that call should be returned by TotalMonthSales() function.
+
+# The RecurseTotalMonthSales() function
+This function should calculate and return the total sales in the subtree rooted at the node whose pointer
+is passed as argument.
