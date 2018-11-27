@@ -183,6 +183,11 @@ the file is successfully loaded into the tree. If not, it returns false. If the 
 function proceeds to call two functions TotalDaySales() and TotalMonthSales() to calculate the total sales
 for 5/2/2010 and the month of February, 2010, respectively. The test_tiny_sales() function displays the values returned by these functions and terminates.
 
+<div align="center">
+    <img src="4.jpg" width="400px"</img> 
+</div>
+
+
 We have come to possess leaked sales data for a large retail store chain. The file tiny.csv contains a subset
 of that data. The file’s contents are:
 
@@ -213,4 +218,9 @@ corresponding month node. In the case of tiny.csv, the node 2 has two children, 
 IDs become the children of the day nodes and the department IDs become the children of the
 corresponding store nodes. The actual sales amount for the specific week is inserted as a child of the
 department node. The sales node is the leaf node.
+
+<div align="center">
+    <img src="5.jpg" width="400px"</img> 
+</div>
+
 
