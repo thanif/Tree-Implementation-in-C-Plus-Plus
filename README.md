@@ -85,7 +85,7 @@ The default constructor. It should create an empty tree. The size member variabl
 This is the destructor for the tree. This task must be done recursively. For re-use, simply call the Destroy() function from the destructor.
 
 # void Deallocate(TreeNode<T>* p)
-Deallocate the subtree rooted at node p. This must be done recursively. Think about whether you would deallocate a tree using pre-order or post-order traversal. Then, apply the appropriate traversal block to free the memory allocated to each node in the subtree rooted at p.
+Deallocate the subtree rooted at node p. This must be done recursively. Apply the appropriate traversal block to free the memory allocated to each node in the subtree rooted at p.
     
 # TreeNode<T>* Root() 
 Returns a pointer to the root node of the tree.
