@@ -70,6 +70,11 @@ and can be moved around over the nodes of the tree using the functions MoveUp(),
 MoveLeft(), MoveRight() and ResetCursor(). Certain member functions of the tree class operate on the
 node pointed to by cursor.
 
+<div align="center">
+    <img src="3.jpg" width="400px"</img> 
+</div>
+
+
 A brief description of what each function in the class Tree is expected to do follows:
 
 
@@ -163,6 +168,11 @@ the values 5 and 6 are inserted as children of the node storing value 2. The val
 children of the node storing the value 3. The values 9 and 10 are inserted as children of the node storing
 the value 4. The function then calls the PreOrder() function of the tree class to display the pre-order
 traversal of the tree.
+
+<div align="center">
+    <img src="2.jpg" width="400px"</img> 
+</div>
+
 
 # The test_tiny_sales() function
 This function first displays a banner on the screen to inform the user what is about to happen. It then
