@@ -71,7 +71,7 @@ MoveLeft(), MoveRight() and ResetCursor(). Certain member functions of the tree 
 node pointed to by cursor.
 
 <div align="center">
-    <img src="3.jpg" width="400px"</img> 
+    <img src="2.jpg" width="400px"</img> 
 </div>
 
 
@@ -170,7 +170,7 @@ the value 4. The function then calls the PreOrder() function of the tree class t
 traversal of the tree.
 
 <div align="center">
-    <img src="2.jpg" width="400px"</img> 
+    <img src="3.jpg" width="400px"</img> 
 </div>
 
 
