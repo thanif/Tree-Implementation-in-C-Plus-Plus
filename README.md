@@ -70,68 +70,77 @@ MoveLeft(), MoveRight() and ResetCursor(). Certain member functions of the tree 
 node pointed to by cursor.
 
 A brief description of what each function in the class Tree is expected to do follows:
-Tree() : The default constructor. It should create an empty tree. The size member variable should be
-appropriately assigned.
-~Tree() : This is the destructor for the tree. This task must be done recursively. For re-use, simply call the
-Destroy() function from the destructor.
-void Deallocate(TreeNode<T>* p) : Deallocate the subtree rooted at node p. This must be done
-recursively. Think about whether you would deallocate a tree using pre-order or post-order traversal.
-Then, apply the appropriate traversal block to free the memory allocated to each node in the subtree
-rooted at p.
-TreeNode<T>* Root() : Returns a pointer to the root node of the tree.
-bool IsEmpty() : Return true if the tree is empty, false otherwise.
-int Size() : Returns the number of nodes in the tree. This can simply return the value of the size member
-variable, if you maintain that variable on every add / delete to the tree.
-void PreOrder() : This is the top level function called to do a pre-order traversal of the tree. This function
-should call the overloaded PreOrder() function with the root node as the first argument and 0 for the
-second. That function implements the pre-order semantics recursively.
-void PostOrder() : This is the top level function called to do a post-order traversal of the tree. This
-function should call the overloaded PostOrder() function with the root node as the first argument and 0
-as the second. That function implements the post-order semantics recursively.
-void PreOrder(TreeNode<T>* n, int depth) : This function should do a pre-order traversal of the
-subtree rooted at the node n. The visit operation is to display the value stored at the node preceded by
-as many spaces as the value stored in the variable depth. This function must be implemented recursively.
-void PostOrder(TreeNode<T>* n, int depth) : This function should do a post-order traversal of the
-subtree rooted at the node n. The visit operation is to display the value stored at the node preceded by
-as many spaces as the value stored in the variable depth. This function must be implemented recursively.
-TreeNode<T>* Search(T val) : Searches the entire tree for and returns the pointer to the first node
-storing the same value as that passed in as argument to this function. If no such node exists, the function
-should return NULL. The search should be done on the tree nodes in the same order as a pre-order
-traversal. This function should simply call the function SearchBelow() with root node as the first argument.
-TreeNode<T>* SearchBelow(TreeNode<T>* n, T val) : Searches the subtree rooted at node n for
-and returns the pointer to the first node storing the same value as that passed in as argument to this
-function. If no such node exists, the function should return NULL. The search should be done on the tree
-nodes in the same order as a pre-order traversal.TreeNode<T>* SearchChildren(TreeNode<T>*n, T val) : Searches the immediate children (only
-one level deep) of the node n for a node that stores the value passed in as second argument. If such a
-child exists, its address is returned. NULL is returned otherwise.
-TreeNode<T>* SearchChildren(T val) : Searches the immediate children (only one level deep) of the
-node pointed to by the member variable cursor, for a node that stores the value passed in as second
-argument. If such a child exists, its address is returned. NULL is returned otherwise.
-TreeNode<T>* InsertChild(TreeNode<T>* parent, T val) : Insert a new child under the node
-parent. The new node should store the value passed in as the second argument to this function. Return
-the address of the new node. This function should rely on the add child functionality of the TreeNode
-class.
-TreeNode<T>* InsertChild(T val) : Insert a new child under the node pointed to by the member
-variable cursor. The new node should store the value passed in as the second argument to this function.
-Return the address of the new node. This function should rely on the add child functionality of the
-TreeNode class.
-void Delete(TreeNode<T>* n, T val) : Delete the subtree rooted at node n. Simply call the
-Deallocate() member function for this.
-void Destroy() : Deallocate the entire tree. Call the Deallocate member function() with the root node as
-parameter to do this.
-void InsertRootNode(T val) : If the root node doesn’t already exist, insert a new node at the root of
-the tree, storing value passed in as argument to this function. Otherwise, do nothing.
-bool MoveDown() : Move the cursor to the first child of the node pointed to by the member variable
-cursor and return true. If the node pointed to by cursor has no children, the cursor should not be updated
-and the function should return false.
-bool MoveRight() : Move the cursor to the next sibling of the node pointed to by the member variable
-cursor and the function should return true. If the node pointed to by cursor has no next sibling, the cursor
-should not be updated and the function should return false.
-bool MoveUp() : Move the cursor to the parent of the node pointed to by the member variable cursor
-and return true. If the node pointed to by cursor has no parent, the cursor should not be updated and the
-function should return false.
-bool MoveLeft() : Move the cursor to the previous sibling of the node pointed to by the member variable
-cursor and the function should return true. If the node pointed to by cursor has no previous sibling, the
-cursor should not be updated and the function should return false.
-TreeNode<T>* GetNode() : Return the value of the member variable cursor.
-void ResetCursor() : Reset the cursor member variable so that it points to the root node of the tree.
+
+
+# Tree() 
+The default constructor. It should create an empty tree. The size member variable should be appropriately assigned.
+
+# ~Tree()
+This is the destructor for the tree. This task must be done recursively. For re-use, simply call the Destroy() function from the destructor.
+
+# void Deallocate(TreeNode<T>* p)
+Deallocate the subtree rooted at node p. This must be done recursively. Think about whether you would deallocate a tree using pre-order or post-order traversal. Then, apply the appropriate traversal block to free the memory allocated to each node in the subtree rooted at p.
+    
+# TreeNode<T>* Root() 
+Returns a pointer to the root node of the tree.
+
+# bool IsEmpty()
+Return true if the tree is empty, false otherwise.
+
+# int Size()
+Returns the number of nodes in the tree. This can simply return the value of the size member variable, if you maintain that variable on every add / delete to the tree.
+
+# void PreOrder()
+This is the top level function called to do a pre-order traversal of the tree. This function should call the overloaded PreOrder() function with the root node as the first argument and 0 for the second. That function implements the pre-order semantics recursively.
+
+# void PostOrder() 
+This is the top level function called to do a post-order traversal of the tree. This function should call the overloaded PostOrder() function with the root node as the first argument and 0 as the second. That function implements the post-order semantics recursively.
+
+# void PreOrder(TreeNode<T>* n, int depth)
+This function should do a pre-order traversal of the subtree rooted at the node n. The visit operation is to display the value stored at the node preceded by as many spaces as the value stored in the variable depth. This function must be implemented recursively.
+    
+# void PostOrder(TreeNode<T>* n, int depth)
+This function should do a post-order traversal of the subtree rooted at the node n. The visit operation is to display the value stored at the node preceded by as many spaces as the value stored in the variable depth. This function must be implemented recursively.
+
+# TreeNode<T>* Search(T val)
+Searches the entire tree for and returns the pointer to the first node storing the same value as that passed in as argument to this function. If no such node exists, the function should return NULL. The search should be done on the tree nodes in the same order as a pre-order traversal. This function should simply call the function SearchBelow() with root node as the first argument.
+    
+# TreeNode<T>* SearchBelow(TreeNode<T>* n, T val)
+Searches the subtree rooted at node n for and returns the pointer to the first node storing the same value as that passed in as argument to this function. If no such node exists, the function should return NULL. The search should be done on the tree
+nodes in the same order as a pre-order traversal.TreeNode<T>* SearchChildren(TreeNode<T>*n, T val) : Searches the immediate children (only one level deep) of the node n for a node that stores the value passed in as second argument. If such a child exists, its address is returned. NULL is returned otherwise.
+    
+# TreeNode<T>* SearchChildren(T val) 
+Searches the immediate children (only one level deep) of the node pointed to by the member variable cursor, for a node that stores the value passed in as second argument. If such a child exists, its address is returned. NULL is returned otherwise.
+
+# TreeNode<T>* InsertChild(TreeNode<T>* parent, T val) 
+Insert a new child under the node parent. The new node should store the value passed in as the second argument to this function. Return the address of the new node. This function should rely on the add child functionality of the TreeNode class.
+
+# TreeNode<T>* InsertChild(T val)
+Insert a new child under the node pointed to by the member variable cursor. The new node should store the value passed in as the second argument to this function. Return the address of the new node. This function should rely on the add child functionality of the TreeNode class.
+
+# void Delete(TreeNode<T>* n, T val) 
+Delete the subtree rooted at node n. Simply call the Deallocate() member function for this.
+
+# void Destroy()
+Deallocate the entire tree. Call the Deallocate member function() with the root node as parameter to do this.
+
+# void InsertRootNode(T val) 
+If the root node doesn’t already exist, insert a new node at the root of the tree, storing value passed in as argument to this function. Otherwise, do nothing.
+
+# bool MoveDown() 
+Move the cursor to the first child of the node pointed to by the member variable cursor and return true. If the node pointed to by cursor has no children, the cursor should not be updated and the function should return false.
+
+# bool MoveRight()
+Move the cursor to the next sibling of the node pointed to by the member variable cursor and the function should return true. If the node pointed to by cursor has no next sibling, the cursor should not be updated and the function should return false.
+
+# bool MoveUp()
+Move the cursor to the parent of the node pointed to by the member variable cursor and return true. If the node pointed to by cursor has no parent, the cursor should not be updated and the function should return false.
+
+# bool MoveLeft()
+Move the cursor to the previous sibling of the node pointed to by the member variable cursor and the function should return true. If the node pointed to by cursor has no previous sibling, the cursor should not be updated and the function should return false.
+
+# TreeNode<T>* GetNode()
+Return the value of the member variable cursor.
+
+# void ResetCursor()
+Reset the cursor member variable so that it points to the root node of the tree.
