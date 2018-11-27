@@ -211,6 +211,11 @@ useless, except it pulls all the data together. The children of the root node ar
 in the data file. In this case, there will be only one, storing the value 2010. In a different data file, however,
 multiple year values may be present, and the root node would, correspondingly, have multiple children.
 
+<div align="center">
+    <img src="5.jpg" width="400px"</img> 
+</div>
+
+
 The function adds month nodes for every month, encountered in the Date column, under the
 corresponding year node. In the case of tiny.csv, 2010 has only one child with value 2. The function also
 adds day nodes for every distinct day of the month, encountered in the date column, under the
@@ -218,10 +223,6 @@ corresponding month node. In the case of tiny.csv, the node 2 has two children, 
 IDs become the children of the day nodes and the department IDs become the children of the
 corresponding store nodes. The actual sales amount for the specific week is inserted as a child of the
 department node. The sales node is the leaf node.
-
-<div align="center">
-    <img src="5.jpg" width="400px"</img> 
-</div>
 
 
 <div align="center">
