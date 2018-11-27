@@ -177,8 +177,30 @@ We have come to possess leaked sales data for a large retail store chain. The fi
 of that data. The file’s contents are:
 
 Store,Dept,Date,Weekly_Sales,IsHoliday
+
 1,1,2010-02-05,14924.5,FALSE
+
 1,2,2010-02-05,24924.5,FALSE
+
 1,1,2010-02-06,34924.5,FALSE
+
 1,2,2010-02-06,44924.5,FALSE
+
+The first column contains the attribute sotre ID, the second column stores the attribute department ID,
+the third column contains the date in YYYY-MM-DD format. The fourth column stores the sales (US $)
+made in the week identified by the date specified in the previous column by the store and department
+identified in the first two columns, respectively. The last column is being ignored.
+
+In the function ReadFile(), we create a root node in the tree with a value 0. This node is pretty much
+useless, except it pulls all the data together. The children of the root node are all year values encountered
+in the data file. In this case, there will be only one, storing the value 2010. In a different data file, however,
+multiple year values may be present, and the root node would, correspondingly, have multiple children.
+
+The function adds month nodes for every month, encountered in the Date column, under the
+corresponding year node. In the case of tiny.csv, 2010 has only one child with value 2. The function also
+adds day nodes for every distinct day of the month, encountered in the date column, under the
+corresponding month node. In the case of tiny.csv, the node 2 has two children, namely 5 and 6. The store
+IDs become the children of the day nodes and the department IDs become the children of the
+corresponding store nodes. The actual sales amount for the specific week is inserted as a child of the
+department node. The sales node is the leaf node.
 
