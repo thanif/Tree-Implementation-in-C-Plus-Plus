@@ -10,5 +10,5 @@ other TreeNode objects, specifically, a parent pointer, a pointer to the first c
 sibling and a pointer to the previous sibling.
 
 <div align="center">
-    <img src="/home/talha/Desktop/1.jpg" width="400px"</img> 
+    <img src="1.jpg" width="400px"</img> 
 </div>
