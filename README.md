@@ -148,3 +148,37 @@ Return the value of the member variable cursor.
 
 # void ResetCursor()
 Reset the cursor member variable so that it points to the root node of the tree.
+
+# The main() function
+The main() function is defined in the file test.cpp. It simply calls two test functions, namely test_tiny_tree()
+and test_tiny_sales().
+
+# The test_tiny_tree() function
+This function is defined in the file test.cpp. In the first three lines, it displays a banner on the screen to
+show the user what is about to be done. It then creates a tree object to store unsigned int values. It
+declares three TreeNode pointer variables. The value 1 is then inserted into the empty tree as the root
+node. The values 2, 3 and 4 are then inserted, respectively into the tree with the root node as the parent,
+and the pointers to the newly inserted children are stored in pointers p1, p2 and p3, respectively. Then,
+the values 5 and 6 are inserted as children of the node storing value 2. The values 7 and 8 are inserted as
+children of the node storing the value 3. The values 9 and 10 are inserted as children of the node storing
+the value 4. The function then calls the PreOrder() function of the tree class to display the pre-order
+traversal of the tree.
+
+# The test_tiny_sales() function
+This function first displays a banner on the screen to inform the user what is about to happen. It then
+creates a tree object. It passes this tree object along with the filename “tiny.csv” to a function ReadFile().
+This function is implemented in the file helper.h. The ReadFile() function reads the data
+file tiny.csv and loads its contents into a tree as described below. The ReadFile() function returns true if
+the file is successfully loaded into the tree. If not, it returns false. If the file is loaded, test_tiny_sales()
+function proceeds to call two functions TotalDaySales() and TotalMonthSales() to calculate the total sales
+for 5/2/2010 and the month of February, 2010, respectively. The test_tiny_sales() function displays the values returned by these functions and terminates.
+
+We have come to possess leaked sales data for a large retail store chain. The file tiny.csv contains a subset
+of that data. The file’s contents are:
+
+Store,Dept,Date,Weekly_Sales,IsHoliday
+1,1,2010-02-05,14924.5,FALSE
+1,2,2010-02-05,24924.5,FALSE
+1,1,2010-02-06,34924.5,FALSE
+1,2,2010-02-06,44924.5,FALSE
+
