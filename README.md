@@ -188,7 +188,7 @@ for 5/2/2010 and the month of February, 2010, respectively. The test_tiny_sales(
 </div>
 
 
-We have come to possess leaked sales data for a large retail store chain. The file tiny.csv contains a subset
+We have come to possess sales data for a large retail store chain. The file tiny.csv contains a subset
 of that data. The file’s contents are:
 
 Store,Dept,Date,Weekly_Sales,IsHoliday
